@@ -106,7 +106,7 @@
           <configuration>
                 <!-- Default test suite, can be overridden by Jenkins -->
                 <suiteXmlFiles>
-                    <suiteXmlFile>src/main/resources/testng_sanity.xml</suiteXmlFile>
+                    <suiteXmlFile>src/main/resources/Parlleltestng.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
           
