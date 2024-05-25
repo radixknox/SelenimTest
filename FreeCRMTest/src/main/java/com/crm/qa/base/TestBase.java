@@ -10,37 +10,49 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestBase {
 
-	public static WebDriver driver;
+    public static WebDriver driver;
+    public static Properties prop;
 
-	public static Properties prop;
+    // Constructor to initialize properties
+    public TestBase() {
+        prop = new Properties();
+        FileInputStream ip = null;
+        try {
+            // Get the Jenkins workspace path from the system environment
+            String workspacePath = System.getenv("WORKSPACE");
 
+            // Construct the file path using File.separator for platform independence
+            String filePath = workspacePath + "\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties";
 
-	public TestBase() {
-	
-		prop = new Properties();
-		FileInputStream ip;
-		try {
-			ip = new FileInputStream(${WORKSPACE}+"\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
-			prop.load(ip);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-}
-	public static void Intailize() {
-		String browserName= prop.getProperty("browser");
-		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",prop.getProperty("chromedriverlocation"));
-			driver = new ChromeDriver();
-		
-		}
-		driver.get(prop.getProperty("url"));
-	}
+            ip = new FileInputStream(filePath);
+            prop.load(ip);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (ip != null) {
+                try {
+                    ip.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
+    // Method to initialize WebDriver and open URL
+    public static void initialize() {
+        String browserName = prop.getProperty("browser");
+        if (browserName.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver", prop.getProperty("chromedriverlocation"));
+            driver = new ChromeDriver();
+        }
+        driver.get(prop.getProperty("url"));
+    }
 
-
+    // Method to quit WebDriver
+    public static void tearDown() {
+        driver.quit();
+    }
 }
