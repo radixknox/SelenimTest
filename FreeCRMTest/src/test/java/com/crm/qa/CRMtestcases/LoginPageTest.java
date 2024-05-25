@@ -18,7 +18,7 @@ public class LoginPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void setUp() {
-		Intailize();
+		initialize();
 		loginPage = new LoginPage() ;
 	}
 	
@@ -33,6 +33,6 @@ public class LoginPageTest extends TestBase{
 	
 	@AfterMethod
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }

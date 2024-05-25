@@ -52,7 +52,7 @@ public class TestBase {
     }
 
     // Method to quit WebDriver
-    public static void tearDown() {
+    public void tearDown() {
         driver.quit();
     }
 }
