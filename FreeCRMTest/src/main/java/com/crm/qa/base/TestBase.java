@@ -20,7 +20,7 @@ public class TestBase {
 		prop = new Properties();
 		FileInputStream ip;
 		try {
-			ip = new FileInputStream("FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			ip = new FileInputStream("${WORKSPACE}\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
