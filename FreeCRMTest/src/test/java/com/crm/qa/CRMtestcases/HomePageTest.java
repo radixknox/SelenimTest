@@ -21,7 +21,7 @@ public class HomePageTest extends TestBase {
 	}
 	@BeforeMethod()
 	public void setUp() {
-		Intailize();
+		initialize();
 		loginpage = new LoginPage();
 		homepage=loginpage.Login(prop.getProperty("username"),prop.getProperty("password"));
 	}
