@@ -22,7 +22,7 @@ public class TestBase {
             String workspacePath = System.getenv("WORKSPACE");
 
             // Construct the file path using File.separator for platform independence
-            String filePath = workspacePath + "\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties";
+            String filePath = workspacePath + "//FreeCRMTest//src//main//java//com//crm//qa//config//config.properties";
 
             ip = new FileInputStream(filePath);
             prop.load(ip);
