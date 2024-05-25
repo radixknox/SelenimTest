@@ -1,0 +1,8 @@
+
+#Not recommended for test data
+
+url = https://www.guru99.com/
+username=aniketpatil1799@gmail.com
+password=Tibco@@@@2023
+browser=chrome
+chromedriverlocation=C:\\webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe

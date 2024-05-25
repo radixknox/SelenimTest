@@ -1,0 +1,32 @@
+package com.crm.qa.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import com.crm.qa.base.TestBase;
+
+public class Guru99 extends TestBase{
+	
+	public Guru99(){
+		super();
+	}
+	
+	public static void main(String[] args) {
+		Intailize();
+		WebElement bigdata = driver.findElement(By.xpath("//span[contains(text(),\"Big Data\")]"));
+		Select BigDatadropdown = new Select(bigdata);
+		BigDatadropdown.selectByValue("DevOps");
+		
+	}
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+
+

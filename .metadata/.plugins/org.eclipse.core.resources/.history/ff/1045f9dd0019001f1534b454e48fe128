@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="methods" name="RegressionSuite" verbose="7">
+  <test name="regressions">
+    <classes>		<class name="com.crm.qa.CRMtestcases.HomePageTest"/>
+    
+      	<class name="com.crm.qa.CRMtestcases.LoginPageTest"/>
+    </classes>
+  </test> <!-- regressions -->
+</suite> <!-- RegressionSuite -->
+
+<!--  thread-count="3" parallel="classes" -->

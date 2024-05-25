@@ -1,0 +1,16 @@
+package com.crm.qa.pages;
+
+import org.openqa.selenium.WebElement;
+
+import com.crm.qa.base.TestBase;
+
+public class Guru99 extends TestBase{
+	
+	public Guru99(){
+		super();
+	}
+	
+	
+	
+
+}
