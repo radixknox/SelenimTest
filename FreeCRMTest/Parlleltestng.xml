@@ -9,4 +9,4 @@
   </test> <!-- regressions -->
 </suite> <!-- RegressionSuite -->
 
-<!--  thread-count="3" parallel="classes" -->
+<!--  thread-count="4" parallel="classes" -->
